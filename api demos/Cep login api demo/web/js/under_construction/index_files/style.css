@@ -1,0 +1,152 @@
+@charset "windows-1251";
+/* CSS Document */ 
+
+html, body{
+	margin: 0;
+	padding: 0;
+	
+	background-color: #365a82;  /* Used for testing */
+}
+a {
+	padding: 0 3px 0 3px;
+	color: #46b4ea;
+	text-decoration: none;
+}
+a.twitter_link { 
+	color: #40d4ff;
+}
+a.twitter_link:hover { 
+	background: #40d4ff;
+	color: #FFF;
+	border-radius: 15px 15px 15px 15px;
+}
+a.facebook_link { 
+	color: #7999df;
+}
+a.facebook_link:hover { 
+	background: #7999df;
+	color: #FFF;
+	border-radius: 15px 15px 15px 15px;
+}
+
+#animation {
+	background-color: #365a82; /* Background color */
+	position: relative;
+}
+#counter {
+	position: absolute;
+}
+#description_txt {
+	position: absolute;
+	width: 610px;
+}
+#txt1 {
+	float: left; 
+	width: 30%;
+	font-family: 'Sniglet', cursive;
+	font-size: 102px;
+	line-height: 0.9;
+	color: #b5c3d1;
+	text-align: right;
+}
+#txt2 {
+	float: left; 
+	width: 25%;
+	font-family: 'Sniglet', cursive;
+	text-align: left;
+	line-height: 1;
+	margin-left: 10px;
+}
+#txt2a {
+	font-size: 34px;
+	line-height: 1;
+	color: #40d4ff;
+}
+#txt2b {
+	font-size: 40px;
+	line-height: 0.8;
+	color: #40d4ff;
+}
+#txt2c {
+	font-size: 17px;
+	line-height: 1.2;
+	color: #40d4ff;
+}
+#txt3 {
+	float: left; 
+	width: 40%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #DBE5EE;
+	text-align: left;
+	margin-left: 10px;
+}
+
+/* jQuery Countdown styles 1.6.1. - plugin by Keith Wood */
+
+#defaultCountdown {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 2;
+	color: #DBE5EE; /* Color of text */
+	width: 300px;
+}
+.hasCountdown {
+	/*border: 1px solid #ccc;*/
+}
+.countdown_rtl {
+	direction: rtl;
+}
+.countdown_holding span {
+	color: #888;
+}
+.countdown_row {
+	clear: both;
+	width: 100%;
+	padding: 0px 2px;
+	text-align: center;
+}
+.countdown_show1 .countdown_section {
+	width: 98%;
+}
+.countdown_show2 .countdown_section {
+	width: 48%;
+}
+.countdown_show3 .countdown_section {
+	width: 20%; /* Original width was 32.5% */
+}
+.countdown_show4 .countdown_section {
+	width: 20%; /* Original width was 24.5% */
+}
+.countdown_show5 .countdown_section {
+	width: 19.5%;
+}
+.countdown_show6 .countdown_section {
+	width: 16.25%;
+}
+.countdown_show7 .countdown_section {
+	width: 14%;
+}
+.countdown_section {
+	display: block;
+	float: left;
+	font-size: 75%;
+	text-align: center;
+	background: #4e749c; /* Color of counter circles */
+	width: 70px;
+	height: 59px;
+	border-radius: 50%;
+	margin: 0 10px 0 0;
+}
+.countdown_amount {
+	font-family: 'Sniglet', cursive;
+	font-size: 220%;
+	color: #DBE5EE; /* Color of counter digits */
+	line-height: 2.3;
+	
+}
+.countdown_descr {
+	display: block;
+	width: 100%;
+}

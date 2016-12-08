@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.jithurjacob.sequoro.MainActivity"
+    android:background="#363636"
+    >
+    <Button android:id="@+id/scan_button" style="@android:style/Holo.SegmentedButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/scan"
+        android:textColor="#ffffff"
+        android:shadowRadius="200"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:height="25dp"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <TextView
+        android:id="@+id/otp"
+        android:textSize="28dp"
+        android:textAppearance="@style/Widget.AppCompat.Light.ActionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/scan_button"
+        android:textColor="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp" />
+    <TextView
+        android:id="@+id/scan_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/otp" />
+</RelativeLayout>

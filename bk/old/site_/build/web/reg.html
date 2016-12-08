@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css" type="text/css" >
+        <script src="./scripts/jquery.js"></script>
+    </head>
+    <body>
+        <div>
+            
+            <form method="POST" action="javascript:register()">
+                <table class="mycolor" > 
+                    <tr>
+                        <td>
+                            <label for="email_txt">E Mail</label>
+                        </td>
+                        <td> 
+                            <input  id="email_txt" type="email" placeholder="Email" name="email_txt" required="required"> 
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <label for="email_txt">Password</label>
+                        </td>
+                        <td> 
+                            <input id="pasw_txt" type="password" placeholder="Password" name="pasw_txt" required="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <label for="email_txt">Retype Password</label>
+                        </td>
+                        <td> 
+                            <input id="repasw_txt" type="password" placeholder="Retype Password" name="repasw_txt" required="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"  >
+                            <div id="result_txt">
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="submit"></label>
+                        </td>
+                        <td> 
+                           <input id="submit" type="submit" value="Register Now">  
+                        </td>
+                    </tr>
+                </table>
+                
+                     
+            </form>
+            
+        </div>
+        <script>
+            function register(){
+                if($('#pasw_txt').val().length<6)
+                    alert("Password must be atleast 6 in length");
+                
+                else if($('#pasw_txt').val()===$('#repasw_txt').val())
+                {
+                    $.ajax({
+                        url:"reg.jsp",
+                        type:'POST',
+                        data:{
+                            email : $('#email_txt').val(),
+                            pasw: $('#pasw_txt').val()
+                        },
+                        success:function(result){
+                            $('#result_txt').html(result); 
+                            $("#email_txt,#pasw_txt,#repasw_txt").val('');
+                        }
+                   
+                    });
+                    
+                }
+                else
+                    alert("not ok");
+                
+                
+            }
+        </script>
+    </body>
+</html>

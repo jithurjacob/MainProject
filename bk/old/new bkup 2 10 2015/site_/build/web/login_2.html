@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="./css/style.css" type="text/css" >
+         <script src="./scripts/jquery.js"></script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <div>
+             
+            <form method="POST" action="javascript:login()">
+                <table class="mycolor" > 
+                    <tr>
+                        <td>
+                            <label for="email_txt">E&nbsp;Mail</label>
+                        </td>
+                        <td> 
+                            <input  id="email_txt" type="text" placeholder="E Mail" name="email_txt" required="required" > 
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <label for="email_txt">Password</label>
+                        </td>
+                        <td> 
+                            <input id="pasw_txt" type="text" name="pasw_txt" placeholder="Password" required="required" >
+                            <input id="platform_txt" type="hidden" name="platform_txt" value="1" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div id="result_txt">
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="submit"></label>
+                        </td>
+                        <td> 
+                           <input id="submit" type="submit" value="Login Now">  
+                        </td>
+                    </tr>
+                </table>
+                
+                     
+            </form>
+           
+        </div>
+        <script>
+            function login(){
+             $.ajax({
+                        url:"login.jsp",
+                        type:'POST',
+                        
+                        dataType: 'json',
+                        data:{
+                            email : $('#email_txt').val(),
+                            pasw: $('#pasw_txt').val(),
+                            platform: $('#platform_txt').val()
+                            
+                        },
+                        success:function(result){
+                          
+                             
+                            $('#result_txt').html(result.status); 
+                            $("#email_txt,#pasw_txt").val('');
+                        }
+                   
+                    });
+                }
+        </script>
+    </body>
+</html>

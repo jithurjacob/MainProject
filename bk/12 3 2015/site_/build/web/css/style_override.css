@@ -1,0 +1,65 @@
+.btn-default{
+    border-color: transparent;
+    background-color: #23934F;
+    padding: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.form-control_white{
+    /* border-color: #6B6B6B; */
+    border-color: #E4DFDF;
+    outline: 0;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0), 0 0 0px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 0px 0px rgba(0,0,0,0), 0 0 0px rgba(102, 175, 233, 0.6);
+}
+
+.bg .footer-socials i{
+    color: white;
+    border: transparent;
+}
+.bg .footer-socials i:hover{
+    border: 2px solid white;
+}
+
+.bg .back-to-top:hover{
+      background-color: #23934F;
+}
+
+.bg h1,.bg h2,.bg h3,.bg h4,.bg h5,.bg h6{
+    color: white;
+}
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th{
+    background-color: transparent;
+}
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th{
+    background-color: transparent;
+}
+.form-horizontal .form-group{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar .nav>li>a:focus, .navbar .nav>li>a:hover{
+    color: rgb(17, 187, 19);
+}
+#undefined-sticky-wrapper .navbar .nav>li>a:focus, .navbar .nav>li>a:hover{
+    color: rgb(17, 187, 19);
+}
+.api #demo_form_cover{
+    margin-left: 10%; 
+    margin-right: 10%; 
+}
+.api #demo_form{
+    margin: 0px;
+}
+.slider-text p{
+    color:black;
+}
+.slider-text p:hover{
+    color:white;
+}
+#team .section-title-gray{
+    color: black;
+}
+#team  p{
+    color: black;
+}

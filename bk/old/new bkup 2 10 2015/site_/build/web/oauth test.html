@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css" type="text/css" >
+        <script src="./scripts/jquery.js"></script>
+        <script src="./scripts/../js/jquery.popupWindow.js"></script>
+    </head>
+    <body>
+        <div>Testing 0auth sequoro</div>
+        <form method="POST" action="javascript:login()">
+            <table class="mycolor" > 
+                <tr>
+                    <td>
+                        <label for="email_txt">E&nbsp;Mail</label>
+                    </td>
+                    <td> 
+                        <input  id="email_txt" type="text" placeholder="E Mail" name="email_txt" required="required" > 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email_txt">Password</label>
+                    </td>
+                    <td> 
+                        <input id="pasw_txt" type="text" name="pasw_txt" placeholder="Password" required="required" >
+                        <input id="platform_txt" type="hidden" name="platform_txt" value="1" >
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="result_txt">
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="submit"></label>
+                    </td>
+                    <td> 
+                        <input id="submit" type="submit" value="Login Now">  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="submit"></label>
+                    </td>
+                    <td> 
+                        <button type="button" class="example4demo" onclick="sequoro_login();">Login using Sequoro</button>
+
+                    </td>
+                </tr>
+            </table>
+
+
+        </form>
+
+        <script>
+            function HandlePopupResult(result) {
+               
+                alert("result of popup is: " + result);
+            }
+            function sequoro_login() {
+//var authWindow = window.open('newjsp.jsp', 'authWindow','height=500px,centerScreen:1' );
+        var a=        $('.example4demo').popupWindow({
+                    windowURL: 'newjsp.jsp',
+                    windowName: 'swip',
+                    centerScreen: 1,
+                    scrollbars: 0
+
+
+                });
+
+            }
+
+        </script>
+
+    </body>
+</html>

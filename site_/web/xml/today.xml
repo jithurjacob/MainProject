@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Content-Length: 571
+Content-Type: application/xml; charset=utf-8
+Last-Modified: Mon, 29 Dec 2014 05:31:54 GMT
+ETag: "160385429"
+Server: Microsoft-IIS/8.5
+X-WNS-Tag: 0
+X-Diagnostic-S: AppContentService_IN_6
+X-Diagnostic-DC: northeu
+X-CMS-ACSElapsedTimeInMilliseconds: 158
+AppEx-Activity-Id: 75558e40-ff69-4aa0-bc4c-62fc2ee377ed
+X-Trace-Context: {"ActivityId":"75558e40-ff69-4aa0-bc4c-62fc2ee377ed"}
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Cache-Control: public, max-age=190
+Date: Mon, 29 Dec 2014 05:38:34 GMT
+Connection: keep-alive
+
+<?xml version="1.0" encoding="utf-8"?><tile><visual version="2" lang="en-US"><binding template="TileSquare150x150Text04" fallback="TileSquareText04"><text id="1">AirAsia plane likely 'at bottom of sea': Indonesia search chief</text></binding><binding template="TileWide310x150Text04" fallback="TileWideText04"><text id="1">AirAsia plane likely 'at bottom of sea': Indonesia search chief</text></binding><binding template="TileSquare310x310ImageAndTextOverlay01"><text id="1">AirAsia plane likely 'at bottom of sea': Indonesia search chief</text></binding></visual></tile>

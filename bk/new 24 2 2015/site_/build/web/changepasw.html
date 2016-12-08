@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Change Password</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="./css/style.css" type="text/css" >
+         <script src="./scripts/jquery.js"></script>
+    </head>
+    <body>
+        <div>
+            <form method="POST" action="javascript:change_password()">
+                <table class="mycolor">
+                    <tr>
+                        <td>
+                    <Label for="oldpasw_txt"> Enter Old Password</Label>
+                        </td>
+                        <td>
+                            <input id="oldpasw_txt"  type="text" name="oldpasw_txt" placeholder="Enter Old Password" required="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                    <Label for="oldpasw_txt"> Enter New Password</Label>
+                        </td>
+                        <td>
+                            <input id="newpasw_txt"  type="text" name="newpasw_txt" placeholder="Enter New Password" required="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                    <Label for="oldpasw_txt"> Re Enter New Password</Label>
+                        </td>
+                        <td>
+                            <input id="repasw_txt"  type="text" name="repasw_txt" placeholder="Re Enter Password" required="required">
+                        </td>
+                    </tr>
+                    
+             <tr>
+                        <td colspan="2">
+                            <div id="result_txt">
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label  for="Change"></label>
+                        </td>
+                        <td> 
+                           <input id="Change" type="submit" value="Change Now">  
+                        </td>
+                    </tr>
+                </table>
+          </div>
+        <script>
+            function change_password(){
+             $.ajax({
+                        url:"changepasw.jsp",
+                        type:'POST',
+                        data:{
+                            oldpasw:$('#oldpasw_txt').val(),
+                            repasw:$('#repasw_txt').val(),
+                            newpasw:$('#newpasw_txt').val(),
+                        },
+                        success:function(result){
+                            $('#result_txt').html(result); 
+                            $("#oldpasw_txt,#repasw_txt,#newpasw_txt").val('');
+                        }
+                   
+                    });
+                }
+        </script>
+    </body>
+</html>
